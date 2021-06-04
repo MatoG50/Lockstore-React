@@ -59,6 +59,9 @@ button {
   border: none;
   font-size: 20px;
 }
+button:hover{
+    background-color: #24c7dcad;
+}
 
 .forgot-pass,
 .req-pass {

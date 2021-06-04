@@ -1,5 +1,9 @@
 import './LandingPage.css';
+import { useHistory } from 'react-router-dom';
+
 const LandingPage = () => {
+  const history = useHistory();
+
   return (
     <div className='landing-page'>
       <div className='login-logo'>
@@ -17,13 +21,19 @@ const LandingPage = () => {
 
           <input type='password' required />
           <br />
-          <button>Log In</button>
+          <button
+            onClick={() => {
+              history.push('/dashboard');
+            }}
+          >
+            Log In
+          </button>
         </form>
         <a className='forgot-pass' href='#'>
           Forgot Password?
         </a>
         <p className='new-acc'>
-          Don't have an account?{' '}
+          Don't have an account?
           <span>
             <a className='req-pass' href='#'>
               Request one

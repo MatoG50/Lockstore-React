@@ -1,0 +1,122 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  background-color: #f7f7f7;
+  font-family: 'Montserrat';
+}
+.login-logo {
+  margin-top: 8%;
+  margin-bottom: 3%;
+}
+.login-form {
+  background-color: #ffffff;
+  text-align: left;
+  padding-left: 65px;
+  padding-right: 65px;
+  width: 25%;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 6px 30px 0 rgba(159, 216, 216, 0.24);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.login {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6f6f6f;
+}
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #6f6f6f;
+  background: transparent;
+  outline: 0;
+  margin-top: 20px;
+  margin-bottom: 39.5px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+button {
+  width: 90%;
+  display: block;
+  height: 38px;
+  margin: 0 auto 40px auto;
+  border-radius: 23px;
+  background-color: #24c6dc;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+
+.forgot-pass,
+.req-pass {
+  font-size: 13px;
+  text-decoration: none;
+  color: #24c6dc;
+  font-weight: 500;
+}
+.new-acc {
+  font-size: 13px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+/* ---------Media Queries----------------- */
+
+/* ----------------------------------
+--------Big Laptop-------------------
+-------------------------------------- */
+@media only screen and (max-width: 1440px) {
+  .login-form {
+    width: 30%;
+  }
+}
+
+/* -----------------------------------------
+    ------------Small laptops---------------
+    ----------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .login-form {
+    width: 45%;
+  }
+}
+
+/* -----------------------------------------
+    ------------Tablets---------------
+    ----------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+  .login-form {
+    width: 55%;
+  }
+}
+
+/* -----------------------------------------
+    ------------MOBILE DEVICES---------------
+    ----------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+  .login-form {
+    width: 85%;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 320px) {
+  .login-form {
+    width: 95%;
+  }
+}

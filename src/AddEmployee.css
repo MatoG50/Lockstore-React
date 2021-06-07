@@ -1,0 +1,61 @@
+#add-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  font-family: Montserrat;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 6px 30px 0 rgba(159, 216, 216, 0.24);
+  background-color: #ffffff;
+  padding: 70px 85px;
+  margin-top: 72px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#add-form button {
+  margin-bottom: 0;
+}
+
+/* ---------Media Queries----------------- */
+
+/* ----------------------------------
+--------Big Laptop-------------------
+-------------------------------------- */
+@media only screen and (max-width: 1440px) {
+  #add-form {
+    width: 35%;
+  }
+}
+
+/* ----------------------------------
+--------Small Laptops-------------------
+-------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  #add-form {
+    width: 45%;
+  }
+}
+
+/* ----------------------------------
+---------------Tablets-------------------
+-------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+  #add-form {
+    width: 65%;
+  }
+}
+
+/* -----------------------------------------
+------------MOBILE DEVICES---------------
+----------------------------------------- */
+
+/* @media only screen and (max-width: 480px) {
+} */
+
+/*----SMALL MOBILE DEVICES------*/
+
+/* @media only screen and (max-width: 320px) {
+} */

@@ -1,5 +1,5 @@
 import './LandingPage.css';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const LandingPage = () => {
   const history = useHistory();
@@ -29,15 +29,15 @@ const LandingPage = () => {
             Log In
           </button>
         </form>
-        <a className='forgot-pass' href='#'>
+        <Link className='forgot-pass' to='/forgotpassword'>
           Forgot Password?
-        </a>
+        </Link>
         <p className='new-acc'>
           Don't have an account?
           <span>
-            <a className='req-pass' href='#'>
+            <Link className='req-pass' to='/newaccount'>
               Request one
-            </a>
+            </Link>
           </span>
         </p>
       </div>

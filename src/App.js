@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import LandingPage from './LandingPage';
+import NavBar from './NavBar';
 import NotFound from './NotFound';
 
 function App() {
@@ -10,12 +11,16 @@ function App() {
         <Route exact path='/'>
           <LandingPage />
         </Route>
-        <Route exact path='/dashboard'>
-          <Dashboard />
-        </Route>
-        <Route exact path='*'>
+
+        <>
+          <NavBar />
+          <Route exact path='/dashboard'>
+            <Dashboard />
+          </Route>
+        </>
+        {/* <Route path='*'>
           <NotFound />
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );

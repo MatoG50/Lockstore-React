@@ -1,5 +1,6 @@
 import './Dashboard.css';
 import Date from './Date';
+
 const Dashboard = () => {
   return (
     <div className='main-page'>

@@ -31,38 +31,6 @@
   margin-bottom: 40px;
 }
 
-label {
-  font-size: 16px;
-  font-weight: 600;
-  color: #6f6f6f;
-}
-input[type='email'],
-input[type='password'] {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #6f6f6f;
-  background: transparent;
-  outline: 0;
-  margin-top: 20px;
-  margin-bottom: 39.5px;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-}
-
-button {
-  width: 90%;
-  display: block;
-  height: 38px;
-  margin: 0 auto 40px auto;
-  border-radius: 23px;
-  background-color: #24c6dc;
-  color: white;
-  border: none;
-  font-size: 20px;
-}
-button:hover{
-    background-color: #24c7dcad;
-}
-
 .forgot-pass,
 .req-pass {
   font-size: 13px;
@@ -88,8 +56,8 @@ button:hover{
 }
 
 /* -----------------------------------------
-    ------------Small laptops---------------
-    ----------------------------------------- */
+------------Small laptops---------------
+----------------------------------------- */
 @media only screen and (max-width: 1200px) {
   .login-form {
     width: 45%;
@@ -97,8 +65,8 @@ button:hover{
 }
 
 /* -----------------------------------------
-    ------------Tablets---------------
-    ----------------------------------------- */
+------------Tablets---------------
+----------------------------------------- */
 
 @media only screen and (max-width: 768px) {
   .login-form {
@@ -107,8 +75,8 @@ button:hover{
 }
 
 /* -----------------------------------------
-    ------------MOBILE DEVICES---------------
-    ----------------------------------------- */
+------------MOBILE DEVICES---------------
+----------------------------------------- */
 
 @media only screen and (max-width: 480px) {
   .login-form {

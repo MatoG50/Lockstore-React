@@ -4,6 +4,7 @@ import Dashboard from './Dashboard';
 import Employees from './Employees';
 import LandingPage from './LandingPage';
 import NavBar from './NavBar';
+import Sales from './Sales';
 // import NotFound from './NotFound';
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path='/addemployee'>
             <AddEmployee />
+          </Route>
+          <Route exact path='/sales'>
+            <Sales />
           </Route>
         </>
         {/* <Route path='*'>

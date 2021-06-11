@@ -2,10 +2,12 @@ import fetchEmployeeApi from '../../apis/fetchEmployeesApi';
 import actionTypes from '../constants/actionTypes';
 
 export const fetchEmployees = () => async (dispatch, getState) => {
-  const response = await fetchEmployeeApi.get('/users');
-  console.log(response.data);
   dispatch({
-    type: actionTypes.FETCH_EMPLOYEES,
+    type: actionTypes.FETCH_EMPLOYEES
+  })
+  const response = await fetchEmployeeApi.get('/users');
+  dispatch({
+    type: actionTypes.FETCH_EMPLOYEES_SUCCESS,
     payload: response.data,
   });
 };

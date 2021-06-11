@@ -35,6 +35,10 @@
   font-size: 32px;
 }
 
+.loading {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* ---------Media Queries----------------- */
 
 /* ----------------------------------

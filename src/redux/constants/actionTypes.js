@@ -1,0 +1,8 @@
+const actionTypes = {
+  FETCH_EMPLOYEES: 'FETCH_EMPLOYEES',
+  SHOW_EMPLOYEES: 'SHOW_EMPLOYEES',
+  ADD_EMPLOYEE: 'ADD_EMPLOYEE',
+  SHOW_SALES: 'SHOW_SALES',
+};
+
+export default actionTypes;

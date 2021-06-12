@@ -90,6 +90,10 @@
     width: 280px;
     height: 280px;
   }
+  .admin p,
+  .attendants p {
+    padding-top: 20px;
+  }
 }
 
 /* -----------------------------------------
@@ -108,6 +112,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .admin p,
+  .attendants p {
+    padding-top: 15px;
+  }
 }
 
 /* -----------------------------------------
@@ -121,6 +129,10 @@
     width: 140px;
     height: 50px;
     margin: 0 20px;
+  }
+  .admin p,
+  .attendants p {
+    padding-top: 15px;
   }
 }
 

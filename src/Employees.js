@@ -9,7 +9,9 @@ import { fetchEmployees } from './redux/actions/lockstoreActions';
 
 const Employees = () => {
   const history = useHistory();
-  const employees = useSelector(state => state.displayEmployees);
+  const employees = useSelector(
+    state => state.displayEmployees.employees?.users
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {

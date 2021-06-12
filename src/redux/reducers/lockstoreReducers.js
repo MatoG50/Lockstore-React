@@ -1,15 +1,13 @@
 import actionTypes from '../constants/actionTypes';
 
 const initialState = {
-  loading: false
+  loading: false,
 };
 
 export const showEmpReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case actionTypes.SHOW_EMPLOYEES:
-      return { ...state, employees: payload };
-      case actionTypes.FETCH_EMPLOYEES:
-        return { ...state, loading: true}
+    case actionTypes.FETCH_DATA:
+      return { ...state, loading: true };
     case actionTypes.FETCH_EMPLOYEES_SUCCESS:
       return { ...state, employees: payload, loading: false };
     default:
@@ -19,8 +17,10 @@ export const showEmpReducer = (state = initialState, { type, payload }) => {
 
 export const showSalesReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case actionTypes.SHOW_SALES:
-      return { ...state, sales: payload };
+    case actionTypes.FETCH_DATA:
+      return { ...state, loading: true };
+    case actionTypes.FETCH_SALES_SUCCESS:
+      return { ...state, sales: payload, loading: false };
 
     default:
       return state;

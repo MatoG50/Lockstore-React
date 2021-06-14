@@ -4,11 +4,11 @@ const SalesTableRow = () => {
   const sale = useSelector(state => state.displaySales.sales?.Sales);
   const salesList =
     sale &&
-    sale.map(sal => {
-      const { id, attendant_name, quantity, product_name, total_price } = sal;
+    sale.map((sal, i) => {
+      const { attendant_name, quantity, product_name, total_price } = sal;
       return (
-        <tbody>
-          <tr className='table-rows' key={id}>
+        <tbody key={i}>
+          <tr className='table-rows'>
             <td>{product_name}</td>
             <td>{total_price}</td>
             <td>{quantity}</td>

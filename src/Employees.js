@@ -2,9 +2,22 @@ import './Employees.css';
 import Date from './Date';
 import PageTitle from './PageTitle';
 import { useHistory } from 'react-router';
+import EmployeeCard from './EmployeeCard';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchEmployees } from './redux/actions/lockstoreActions';
 
 const Employees = () => {
   const history = useHistory();
+  const employees = useSelector(
+    state => state.displayEmployees.employees?.users
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchEmployees());
+  }, []);
+  console.log('Employees: ', employees);
 
   return (
     <div className='main-page'>
@@ -34,36 +47,7 @@ const Employees = () => {
         </button>
       </div>
       <div className='employee-cards'>
-        <div className='employee-card'>
-          <img id='emp-image' src='./resources/user.svg' alt='Employee'></img>
-          <p className='emp-name'>Martin Githinji</p>
-          <p className='emp-role'>Attendant</p>
-        </div>
-        <div className='employee-card'>
-          <img id='emp-image' src='./resources/user.svg' alt='Employee'></img>
-          <p className='emp-name'>Martin Githinji</p>
-          <p className='emp-role'>Attendant</p>
-        </div>
-        <div className='employee-card'>
-          <img id='emp-image' src='./resources/user.svg' alt='Employee'></img>
-          <p className='emp-name'>Martin Githinji</p>
-          <p className='emp-role'>Attendant</p>
-        </div>
-        <div className='employee-card'>
-          <img id='emp-image' src='./resources/user.svg' alt='Employee'></img>
-          <p className='emp-name'>Martin Githinji</p>
-          <p className='emp-role'>Attendant</p>
-        </div>
-        <div className='employee-card'>
-          <img id='emp-image' src='./resources/user.svg' alt='Employee'></img>
-          <p className='emp-name'>Martin Githinji</p>
-          <p className='emp-role'>Attendant</p>
-        </div>
-        <div className='employee-card'>
-          <img id='emp-image' src='./resources/user.svg' alt='Employee'></img>
-          <p className='emp-name'>Martin Githinji</p>
-          <p className='emp-role'>Attendant</p>
-        </div>
+        <EmployeeCard />
       </div>
     </div>
   );

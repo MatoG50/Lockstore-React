@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import EmployeeCard from './EmployeeCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchEmployees } from './redux/actions/lockstoreActions';
+import { fetchUsers } from './redux/actions/lockstoreActions';
 
 const Employees = () => {
   const history = useHistory();
@@ -15,7 +15,7 @@ const Employees = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchEmployees());
+    dispatch(fetchUsers());
   }, []);
   console.log('Employees: ', employees);
 

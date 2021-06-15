@@ -17,16 +17,16 @@ function App() {
 
         <>
           <NavBar />
-          <Route exact path='/dashboard'>
+          <Route path='/dashboard'>
             <Dashboard />
           </Route>
-          <Route exact path='/employees'>
+          <Route path='/employees'>
             <Employees />
           </Route>
-          <Route exact path='/addemployee'>
+          <Route path='/addemployee'>
             <AddEmployee />
           </Route>
-          <Route exact path='/sales'>
+          <Route path='/sales'>
             <Sales />
           </Route>
         </>

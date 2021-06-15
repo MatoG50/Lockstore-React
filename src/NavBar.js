@@ -1,7 +1,14 @@
 import './NavBar.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logOut } from './redux/actions/lockstoreActions';
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logOut());
+  };
+
   return (
     <div className='navbar'>
       <img
@@ -28,7 +35,9 @@ const NavBar = () => {
           <Link to='/sales'>Sales</Link>
         </li>
         <li>
-          <Link to='/'>Logout</Link>
+          <Link to='/' onClick={() => handleLogout()}>
+            Logout
+          </Link>
         </li>
       </ul>
     </div>

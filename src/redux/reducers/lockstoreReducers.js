@@ -1,10 +1,11 @@
 import actionTypes from '../constants/actionTypes';
 
-const initialState = {
-  loading: false,
-};
-
-export const showEmpReducer = (state = initialState, { type, payload }) => {
+export const showEmpReducer = (
+  state = {
+    loading: false,
+  },
+  { type, payload }
+) => {
   switch (type) {
     case actionTypes.FETCH_DATA:
       return { ...state, loading: true };
@@ -15,12 +16,71 @@ export const showEmpReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export const showSalesReducer = (state = initialState, { type, payload }) => {
+export const showSalesReducer = (
+  state = {
+    loading: false,
+  },
+  { type, payload }
+) => {
   switch (type) {
     case actionTypes.FETCH_DATA:
       return { ...state, loading: true };
     case actionTypes.FETCH_SALES_SUCCESS:
       return { ...state, sales: payload, loading: false };
+
+    default:
+      return state;
+  }
+};
+
+export const authReducer = (
+  state = {
+    token: localStorage.getItem('token'),
+    username: localStorage.getItem('user'),
+    role: localStorage.getItem('role'),
+    isAuthenticated: false,
+    loading: false,
+  },
+  action
+) => {
+  switch (action.type) {
+    case actionTypes.USER_LOADING:
+      return { ...state, loading: true };
+    case actionTypes.USER_LOADED:
+    case actionTypes.LOGIN_SUCCESS:
+      return {
+        ...state,
+        token: action.token,
+        username: action.user,
+        role: action.role,
+        isAuthenticated: true,
+        loading: false,
+      };
+    case actionTypes.AUTH_ERROR:
+    case actionTypes.LOGOUT_SUCCESS:
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      localStorage.removeItem('role');
+      return {
+        ...state,
+        token: null,
+        isAuthenticated: false,
+        loading: false,
+        username: null,
+        role: null,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export const errorsReducer = (state = { msg: null, status: null }, action) => {
+  switch (action.type) {
+    case actionTypes.SHOW_ERRORS:
+      return { ...state, msg: action.msg, status: action.status };
+    case actionTypes.CLEAR_ERRORS:
+      return { ...state, msg: {} };
 
     default:
       return state;

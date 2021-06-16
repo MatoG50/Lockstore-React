@@ -1,12 +1,16 @@
+import { useSelector } from 'react-redux';
 import './Dashboard.css';
 import Date from './Date';
 
 const Dashboard = () => {
+  const state = useSelector(state => state);
   return (
     <div className='main-page'>
       <Date />
       <div className='dash-message'>
-        <p className='text-1'>WELCOME TO YOUR DASHBOARD, MARTIN.</p>
+        <p className='text-1'>
+          WELCOME TO YOUR DASHBOARD, <span>{state.auth.username}</span>.
+        </p>
         <p className='text-2'>
           View your company's performance through the cards below
         </p>

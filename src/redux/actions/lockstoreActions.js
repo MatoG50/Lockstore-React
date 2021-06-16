@@ -23,6 +23,9 @@ export const loginUser = creds => dispatch => {
         user: res.data.username,
         role: res.data.role,
       });
+      dispatch({
+        type: actionTypes.CLEAR_ERRORS,
+      });
     })
     .catch(err => {
       console.log(err.response);
@@ -30,6 +33,9 @@ export const loginUser = creds => dispatch => {
         type: actionTypes.SHOW_ERRORS,
         msg: err.response.data.message,
         status: err.response.status,
+      });
+      dispatch({
+        type: actionTypes.AUTH_ERROR,
       });
     });
 };

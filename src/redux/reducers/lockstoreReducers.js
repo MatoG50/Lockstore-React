@@ -38,7 +38,6 @@ export const authReducer = (
     token: localStorage.getItem('token'),
     username: localStorage.getItem('user'),
     role: localStorage.getItem('role'),
-    isAuthenticated: false,
     loading: false,
   },
   action
@@ -53,7 +52,6 @@ export const authReducer = (
         token: action.token,
         username: action.user,
         role: action.role,
-        isAuthenticated: true,
         loading: false,
       };
     case actionTypes.AUTH_ERROR:
@@ -64,7 +62,6 @@ export const authReducer = (
       return {
         ...state,
         token: null,
-        isAuthenticated: false,
         loading: false,
         username: null,
         role: null,
@@ -80,7 +77,7 @@ export const errorsReducer = (state = { msg: null, status: null }, action) => {
     case actionTypes.SHOW_ERRORS:
       return { ...state, msg: action.msg, status: action.status };
     case actionTypes.CLEAR_ERRORS:
-      return { ...state, msg: {} };
+      return { ...state, msg: null, status: null };
 
     default:
       return state;

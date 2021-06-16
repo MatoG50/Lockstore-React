@@ -1,9 +1,16 @@
 import { combineReducers } from 'redux';
-import { showEmpReducer, showSalesReducer } from './lockstoreReducers';
+import {
+  authReducer,
+  errorsReducer,
+  showEmpReducer,
+  showSalesReducer,
+} from './lockstoreReducers';
 
 const reducers = combineReducers({
   displayEmployees: showEmpReducer,
   displaySales: showSalesReducer,
+  auth: authReducer,
+  displayErrors: errorsReducer,
 });
 
 export default reducers;

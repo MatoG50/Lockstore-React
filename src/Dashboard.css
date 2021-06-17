@@ -19,6 +19,9 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.text-1 span {
+  text-transform: uppercase;
+}
 .text-2 {
   font-size: 28px;
   font-weight: 500;

@@ -15,8 +15,6 @@ export const loginUser = creds => dispatch => {
       localStorage.setItem('token', res.data.access_token);
       localStorage.setItem('user', res.data.username);
       localStorage.setItem('role', res.data.role);
-
-      console.log(res);
       dispatch({
         type: actionTypes.LOGIN_SUCCESS,
         token: res.data.access_token,

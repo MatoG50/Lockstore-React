@@ -1,16 +1,17 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
+import Products from './Products';
 const ProductCard = () => {
   const product = useSelector(
     state => state.displayProducts.products?.Products
   );
   const productList =
     product &&
-    product.map((prod, id) => {
+    product.map(prod => {
       return (
-        <div className='product-card' key={id}>
-          <Link to={`/products/${id}`}>
+        <div className='product-card' key={prod['product id']}>
+          <Link to={`/products/${prod['product id']}`}>
             <img
               id='product-image'
               src='./resources/products.svg'

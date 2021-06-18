@@ -3,7 +3,7 @@ import Date from './Date';
 import PageTitle from './PageTitle';
 import { useHistory } from 'react-router-dom';
 import ProductCard from './ProductCard';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProducts } from './redux/actions/lockstoreActions';
 

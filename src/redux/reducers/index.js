@@ -12,7 +12,7 @@ const reducers = combineReducers({
   auth: authReducer,
   displayEmployees: showEmpReducer,
   displayProducts: showProdReducer,
-  showproduct: showSingleProdReducer,
+  showProduct: showSingleProdReducer,
   displaySales: showSalesReducer,
   displayErrors: errorsReducer,
 });

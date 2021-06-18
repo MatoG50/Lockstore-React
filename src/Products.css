@@ -1,5 +1,4 @@
 .total-prod {
-  font-family: Montserrat;
   font-size: 28px;
   font-weight: 600;
   color: #6f6f6f;
@@ -13,7 +12,6 @@
   height: 52px;
   margin-left: 70%;
   font-size: 20px;
-  font-family: Montserrat;
   font-weight: 600;
   background-color: #b43b8a;
   border-radius: 10px;
@@ -26,7 +24,6 @@
   background-color: #b43b8ab7;
 }
 #search {
-  font-family: Montserrat;
   height: 40px;
   font-size: 20px;
   font-weight: 600;

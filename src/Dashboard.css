@@ -9,7 +9,6 @@
 }
 .text-1,
 .text-2 {
-  font-family: Montserrat;
   text-align: center;
   color: white;
 }
@@ -42,7 +41,6 @@
   margin: 0 70px;
 }
 .card-name {
-  font-family: Montserrat;
   font-size: 26px;
   text-align: center;
   color: #24c6dc;
@@ -50,7 +48,6 @@
   font-weight: bold;
 }
 .card-no {
-  font-family: Montserrat;
   font-size: 120px;
   font-weight: 800;
 

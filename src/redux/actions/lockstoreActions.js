@@ -71,6 +71,38 @@ export const fetchUsers = () => async (dispatch, getState) => {
   });
 };
 
+// FETCH PRODUCTS
+
+export const fetchProducts = () => async (dispatch, getState) => {
+  // User Loading
+  dispatch({
+    type: actionTypes.FETCH_DATA,
+  });
+  const response = await axios.get(
+    'https://storemanagerapi2.herokuapp.com/api/v2/products',
+    tokenConfig(getState)
+  );
+  dispatch({
+    type: actionTypes.FETCH_PRODUCTS_SUCCESS,
+    payload: response.data,
+  });
+};
+
+export const fetchProduct = id => async (dispatch, getState) => {
+  // User Loading
+  dispatch({
+    type: actionTypes.FETCH_DATA,
+  });
+  const response = await axios.get(
+    `https://storemanagerapi2.herokuapp.com/api/v2/products/${id}`,
+    tokenConfig(getState)
+  );
+  dispatch({
+    type: actionTypes.FETCH_PRODUCT_SUCCESS,
+    payload: response.data,
+  });
+};
+
 // Check token and load sales
 export const fetchSales = () => async (dispatch, getState) => {
   dispatch({

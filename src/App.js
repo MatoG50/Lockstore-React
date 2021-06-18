@@ -3,7 +3,9 @@ import AddEmployee from './AddEmployee';
 import Dashboard from './Dashboard';
 import Employees from './Employees';
 import LandingPage from './LandingPage';
+import Modal from './Modal';
 import NavBar from './NavBar';
+import Products from './Products';
 import Protected from './Protected';
 import Sales from './Sales';
 // import NotFound from './NotFound';
@@ -27,6 +29,12 @@ function App() {
             </Route>
             <Route path='/addemployee'>
               <AddEmployee />
+            </Route>
+            <Route exact path='/products'>
+              <Products />
+            </Route>
+            <Route path='/products/:productId'>
+              <Modal />
             </Route>
             <Route path='/sales'>
               <Sales />

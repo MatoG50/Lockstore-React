@@ -57,6 +57,20 @@
   margin-top: 15px;
   font-weight: 500;
 }
+.login-btn {
+  background-color: #24c6dc;
+  margin: 0 auto 10px auto;
+  width: 90%;
+  display: block;
+  height: 38px;
+  border-radius: 23px;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+.login-btn:hover {
+  background-color: #24c7dca6;
+}
 
 .loader {
   border-top: 10px solid blue;

@@ -1,23 +1,21 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Date from './Date';
+import { useDispatch } from 'react-redux';
 import PageTitle from './PageTitle';
 import { fetchSales } from './redux/actions/lockstoreActions';
 import './Sales.css';
 import SalesTableRow from './SalesTableRow';
+import Today from './Today';
 
 const Sales = () => {
-  const sale = useSelector(state => state.displaySales.sales?.Sales);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchSales());
   }, []);
-  console.log('Sales: ', sale);
 
   return (
     <div className='main-page'>
-      <Date />
+      <Today />
       <PageTitle title='Sales' />
       <table id='sales-table'>
         <tbody>

@@ -1,5 +1,5 @@
 import './NavBar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from './redux/actions/lockstoreActions';
 
@@ -36,21 +36,29 @@ const NavBar = () => {
       <p className='role'>{state.auth.role}</p>
       <ul>
         <li>
-          <Link to='/dashboard'>Dashboard</Link>
+          <NavLink activeClassName='active-nav' to='/dashboard'>
+            Dashboard
+          </NavLink>
         </li>
         <li>
-          <Link to='/employees'>Employees</Link>
+          <NavLink activeClassName='active-nav' to='/employees'>
+            Employees
+          </NavLink>
         </li>
         <li>
-          <Link to='/products'>Products</Link>
+          <NavLink activeClassName='active-nav' to='/products'>
+            Products
+          </NavLink>
         </li>
         <li>
-          <Link to='/sales'>Sales</Link>
+          <NavLink activeClassName='active-nav' to='/sales'>
+            Sales
+          </NavLink>
         </li>
         <li>
-          <Link to='/' onClick={() => handleLogout()}>
+          <NavLink to='/' onClick={() => handleLogout()}>
             Logout
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>

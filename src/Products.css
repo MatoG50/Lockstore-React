@@ -14,14 +14,18 @@
   font-size: 20px;
   font-weight: 600;
   background-color: #b43b8a;
+  display: block;
+  color: white;
+  border: none;
+  font-size: 16px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-#add-Product:hover {
-  background-color: #b43b8ab7;
+#add-product:hover {
+  background-color: #b43b8abd;
 }
 #search {
   height: 40px;
@@ -43,10 +47,7 @@
   -ms-border-radius: 34px;
   -o-border-radius: 34px;
 }
-input[type='text'] {
-  outline: none;
-  color: #24c6dc;
-}
+
 ::placeholder {
   color: #24c6dc;
 }

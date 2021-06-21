@@ -6,6 +6,7 @@ import {
   showProdReducer,
   showSingleProdReducer,
   showSalesReducer,
+  showSuccessReducer,
 } from './lockstoreReducers';
 
 const reducers = combineReducers({
@@ -15,6 +16,7 @@ const reducers = combineReducers({
   showProduct: showSingleProdReducer,
   displaySales: showSalesReducer,
   displayErrors: errorsReducer,
+  successMessage: showSuccessReducer,
 });
 
 export default reducers;

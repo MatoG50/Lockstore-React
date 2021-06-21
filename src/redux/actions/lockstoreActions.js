@@ -52,6 +52,53 @@ export const tokenConfig = getState => {
   return config;
 };
 
+// SIGN_UP
+export const signUpUser = newCreds => (dispatch, getState) => {
+  axios
+    .post(
+      'https://storemanagerapi2.herokuapp.com/api/v2/auth/signup',
+      newCreds,
+      tokenConfig(getState)
+    )
+    .then(res => {
+      dispatch({
+        type: actionTypes.SHOW_SUCCESS,
+        msg: res.data.message,
+        status: res.status,
+      });
+      alert(res.data.message);
+    })
+    .catch(err => {
+      console.log(err.response);
+      dispatch({
+        type: actionTypes.SHOW_ERRORS,
+        msg: err.response.data.message.inventory,
+        status: err.response.status,
+      });
+    });
+};
+
+// CREATE PRODUCT
+export const createProduct = newProd => (dispatch, getState) => {
+  axios
+    .post(
+      'https://storemanagerapi2.herokuapp.com/api/v2/products',
+      newProd,
+      tokenConfig(getState)
+    )
+    .then(res => {
+      dispatch({
+        type: actionTypes.SHOW_SUCCESS,
+        msg: res.data.message,
+        status: res.status,
+      });
+      alert(res.data.message);
+    })
+    .catch(err => {
+      console.log(err.response.data.message);
+    });
+};
+
 // FETCH EMPLOYEES
 
 export const fetchUsers = () => async (dispatch, getState) => {

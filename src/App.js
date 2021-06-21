@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AddEmployee from './AddEmployee';
+import AddProduct from './AddProduct';
 import Dashboard from './Dashboard';
 import Employees from './Employees';
 import LandingPage from './LandingPage';
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path='/products/:productId'>
               <Modal />
+            </Route>
+            <Route exact path='/addproduct'>
+              <AddProduct />
             </Route>
             <Route path='/sales'>
               <Sales />

@@ -11,6 +11,8 @@ export const authReducer = (
 ) => {
   switch (action.type) {
     case actionTypes.USER_LOADING:
+      case actionTypes.ADDING_PRODUCT:
+    case actionTypes.SIGNUP_LOADING:
       return { ...state, loading: true };
     case actionTypes.USER_LOADED:
     case actionTypes.LOGIN_SUCCESS:
@@ -102,6 +104,21 @@ export const showSalesReducer = (
       return { ...state, loading: true };
     case actionTypes.FETCH_SALES_SUCCESS:
       return { ...state, sales: payload, loading: false };
+
+    default:
+      return state;
+  }
+};
+
+export const showSuccessReducer = (
+  state = { msg: null, status: null },
+  action
+) => {
+  switch (action.type) {
+    case actionTypes.SHOW_SUCCESS:
+      return { ...state, msg: action.msg, status: action.status };
+    case actionTypes.CLEAR_SUCCESS:
+      return { ...state, msg: null, status: null };
 
     default:
       return state;

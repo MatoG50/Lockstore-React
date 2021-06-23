@@ -9,7 +9,7 @@ import NavBar from './NavBar';
 import Products from './Products';
 import Protected from './Protected';
 import Sales from './Sales';
-// import NotFound from './NotFound';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -44,10 +44,10 @@ function App() {
               <Sales />
             </Route>
           </Protected>
+          <Route>
+            <NotFound />
+          </Route>
         </>
-        {/* <Route path='*'>
-          <NotFound />
-        </Route> */}
       </Switch>
     </Router>
   );

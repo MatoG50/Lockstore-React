@@ -1,0 +1,38 @@
+#update-prod {
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 6px 30px 0 rgba(159, 216, 216, 0.24);
+  background-color: #ffffff;
+  padding: 70px 85px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#update-prod button {
+  background-color: #24c6dc;
+  margin: 10px auto 10px auto;
+  width: 60%;
+  display: block;
+  height: 38px;
+  border-radius: 23px;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+#update-prod button:hover {
+  background-color: #24c7dca6;
+}
+.modal-background {
+  height: 100vh;
+  width: 80%;
+  background-color: rgba(200, 200, 200);
+  position: fixed;
+  position: absolute;
+  z-index: 1;
+}

@@ -169,6 +169,26 @@ export const removeProduct = id => async (dispatch, getState) => {
     });
 };
 
+// Update product
+export const updateProduct = (id, editProd) => (dispatch, getState) => {
+  axios
+    .put(
+      `https://storemanagerapi2.herokuapp.com/api/v2/products/${id}`,
+      editProd,
+      tokenConfig(getState)
+    )
+    .then(response => {
+      dispatch({
+        type: actionTypes.SHOW_SUCCESS,
+        msg: response.data.message,
+      });
+      alert(response.data.message);
+      dispatch({
+        type: actionTypes.CLEAR_SUCCESS,
+      });
+    });
+};
+
 // Check token and load sales
 export const fetchSales = () => async (dispatch, getState) => {
   dispatch({

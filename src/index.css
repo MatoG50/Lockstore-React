@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Montserrat;
 }
 .main-page {
   background-color: #f0f0f0;
@@ -31,17 +32,7 @@ input[type='text'] {
   font-size: 16px;
 }
 
-button {
-  width: 90%;
-  display: block;
-  height: 38px;
-  margin: 0 auto 40px auto;
-  border-radius: 23px;
-  background-color: #24c6dc;
-  color: white;
-  border: none;
-  font-size: 20px;
-}
-button:hover {
-  background-color: #24c7dcad;
+.loading {
+  font-family: 'Poppins', sans-serif;
+  margin-left: 2%;
 }

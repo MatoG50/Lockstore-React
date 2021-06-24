@@ -20,7 +20,6 @@
 }
 .emp-name,
 .emp-role {
-  font-family: Montserrat;
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
@@ -33,10 +32,6 @@
 .emp-name {
   color: #24c6dc;
   font-size: 32px;
-}
-
-.loading {
-  font-family: 'Poppins', sans-serif;
 }
 
 /* ---------Media Queries----------------- */

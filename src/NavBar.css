@@ -26,7 +26,6 @@
 .name,
 .role {
   text-align: center;
-  font-family: Montserrat;
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
@@ -47,11 +46,15 @@ li {
 li a {
   text-decoration: none;
   font-size: 28px;
-  font-family: Montserrat;
   color: #6a6a6a;
   font-weight: 600;
 }
-
+li a:hover {
+  color: #24c7dcad;
+}
+.active-nav {
+  color: #24c6dc;
+}
 /* ---------Media Queries----------------- */
 
 /* ----------------------------------

@@ -64,7 +64,7 @@ const LandingPage = () => {
           {state.auth.loading === true ? (
             <div className='loader'></div>
           ) : (
-            <button type='submit'>Log In</button>
+            <button className='login-btn' type='submit'>Log In</button>
           )}
         </form>
         <Link className='forgot-pass' to='/forgotpassword'>

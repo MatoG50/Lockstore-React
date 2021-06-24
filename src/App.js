@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AddEmployee from './AddEmployee';
+import AddProduct from './AddProduct';
 import Dashboard from './Dashboard';
 import Employees from './Employees';
 import LandingPage from './LandingPage';
+import Modal from './Modal';
 import NavBar from './NavBar';
+import Products from './Products';
 import Protected from './Protected';
 import Sales from './Sales';
-// import NotFound from './NotFound';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -28,14 +31,23 @@ function App() {
             <Route path='/addemployee'>
               <AddEmployee />
             </Route>
+            <Route exact path='/products'>
+              <Products />
+            </Route>
+            <Route path='/products/:productId'>
+              <Modal />
+            </Route>
+            <Route exact path='/addproduct'>
+              <AddProduct />
+            </Route>
             <Route path='/sales'>
               <Sales />
             </Route>
           </Protected>
+          <Route>
+            <NotFound />
+          </Route>
         </>
-        {/* <Route path='*'>
-          <NotFound />
-        </Route> */}
       </Switch>
     </Router>
   );

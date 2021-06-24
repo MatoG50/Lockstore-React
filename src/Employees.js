@@ -1,40 +1,44 @@
 import './Employees.css';
-import Date from './Date';
 import PageTitle from './PageTitle';
 import { useHistory } from 'react-router';
 import EmployeeCard from './EmployeeCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchUsers } from './redux/actions/lockstoreActions';
+import Today from './Today';
 
 const Employees = () => {
   const history = useHistory();
   const employees = useSelector(
     state => state.displayEmployees.employees?.users
   );
+  const attendants =
+    employees && employees.filter(cur => cur.role === 'attendant').length;
+  const admin =
+    employees && employees.filter(cur => cur.role === 'admin').length;
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, []);
-  console.log('Employees: ', employees);
 
   return (
     <div className='main-page'>
-      <Date />
+      <Today />
       <PageTitle title='Employees' />
       <p className='total-emp'>
-        Total employees: <span>20</span>
+        Total employees: <span>{employees ? employees.length : null}</span>
       </p>
       <div className='employee-no'>
         <div className='attendants'>
           <p>
-            Attendants: <span>20</span>
+            Attendants: <span>{employees ? attendants : null}</span>
           </p>
         </div>
         <div className='admin'>
           <p>
-            Admin: <span>2</span>
+            Admin: <span>{employees ? admin : null}</span>
           </p>
         </div>
         <button

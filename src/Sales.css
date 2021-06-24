@@ -7,7 +7,6 @@
 
 .table-header th {
   height: 34px;
-  font-family: Montserrat;
   font-size: 25px;
   font-weight: 600;
   text-align: left;
@@ -27,7 +26,6 @@
 }
 .table-rows td {
   height: 30px;
-  font-family: Montserrat;
   font-size: 20px;
   font-weight: 600;
   text-align: left;

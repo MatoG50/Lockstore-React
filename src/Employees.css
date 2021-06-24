@@ -1,5 +1,4 @@
 .total-emp {
-  font-family: Montserrat;
   font-size: 28px;
   font-weight: 600;
   color: #6f6f6f;
@@ -22,7 +21,6 @@
   height: 62px;
   margin: 0 70px;
   font-size: 24px;
-  font-family: Montserrat;
   font-weight: 600;
 }
 .attendants {
@@ -45,6 +43,11 @@
 }
 #add-employee {
   background-color: #b43b8a;
+  display: block;
+  border-radius: 23px;
+  color: white;
+  border: none;
+  font-size: 16px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -66,7 +69,6 @@
 }
 .employee-cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   margin-left: 10%;
   margin-top: 20px;

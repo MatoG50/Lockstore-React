@@ -15,8 +15,6 @@ export const loginUser = creds => dispatch => {
       localStorage.setItem('token', res.data.access_token);
       localStorage.setItem('user', res.data.username);
       localStorage.setItem('role', res.data.role);
-
-      console.log(res);
       dispatch({
         type: actionTypes.LOGIN_SUCCESS,
         token: res.data.access_token,
@@ -54,6 +52,53 @@ export const tokenConfig = getState => {
   return config;
 };
 
+// SIGN_UP
+export const signUpUser = newCreds => (dispatch, getState) => {
+  axios
+    .post(
+      'https://storemanagerapi2.herokuapp.com/api/v2/auth/signup',
+      newCreds,
+      tokenConfig(getState)
+    )
+    .then(res => {
+      dispatch({
+        type: actionTypes.SHOW_SUCCESS,
+        msg: res.data.message,
+        status: res.status,
+      });
+      alert(res.data.message);
+    })
+    .catch(err => {
+      console.log(err.response);
+      dispatch({
+        type: actionTypes.SHOW_ERRORS,
+        msg: err.response.data.message.inventory,
+        status: err.response.status,
+      });
+    });
+};
+
+// CREATE PRODUCT
+export const createProduct = newProd => (dispatch, getState) => {
+  axios
+    .post(
+      'https://storemanagerapi2.herokuapp.com/api/v2/products',
+      newProd,
+      tokenConfig(getState)
+    )
+    .then(res => {
+      dispatch({
+        type: actionTypes.SHOW_SUCCESS,
+        msg: res.data.message,
+        status: res.status,
+      });
+      alert(res.data.message);
+    })
+    .catch(err => {
+      console.log(err.response.data.message);
+    });
+};
+
 // FETCH EMPLOYEES
 
 export const fetchUsers = () => async (dispatch, getState) => {
@@ -69,6 +114,59 @@ export const fetchUsers = () => async (dispatch, getState) => {
     type: actionTypes.FETCH_EMPLOYEES_SUCCESS,
     payload: response.data,
   });
+};
+
+// FETCH PRODUCTS
+
+export const fetchProducts = () => async (dispatch, getState) => {
+  // User Loading
+  dispatch({
+    type: actionTypes.FETCH_DATA,
+  });
+  const response = await axios.get(
+    'https://storemanagerapi2.herokuapp.com/api/v2/products',
+    tokenConfig(getState)
+  );
+  dispatch({
+    type: actionTypes.FETCH_PRODUCTS_SUCCESS,
+    payload: response.data,
+  });
+};
+
+// Fetch product
+export const fetchProduct = id => async (dispatch, getState) => {
+  // User Loading
+  dispatch({
+    type: actionTypes.FETCH_DATA,
+  });
+  const response = await axios.get(
+    `https://storemanagerapi2.herokuapp.com/api/v2/products/${id}`,
+    tokenConfig(getState)
+  );
+  dispatch({
+    type: actionTypes.FETCH_PRODUCT_SUCCESS,
+    payload: response.data,
+  });
+};
+
+// Delete a product
+
+export const removeProduct = id => async (dispatch, getState) => {
+  axios
+    .delete(
+      `https://storemanagerapi2.herokuapp.com/api/v2/products/${id}`,
+      tokenConfig(getState)
+    )
+    .then(res => {
+      dispatch({
+        type: actionTypes.SHOW_SUCCESS,
+        msg: res.data.message,
+      });
+      alert(res.data.message);
+      dispatch({
+        type: actionTypes.CLEAR_SUCCESS,
+      });
+    });
 };
 
 // Check token and load sales

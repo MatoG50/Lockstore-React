@@ -133,6 +133,7 @@ export const fetchProducts = () => async (dispatch, getState) => {
   });
 };
 
+// Fetch product
 export const fetchProduct = id => async (dispatch, getState) => {
   // User Loading
   dispatch({
@@ -146,6 +147,26 @@ export const fetchProduct = id => async (dispatch, getState) => {
     type: actionTypes.FETCH_PRODUCT_SUCCESS,
     payload: response.data,
   });
+};
+
+// Delete a product
+
+export const removeProduct = id => async (dispatch, getState) => {
+  axios
+    .delete(
+      `https://storemanagerapi2.herokuapp.com/api/v2/products/${id}`,
+      tokenConfig(getState)
+    )
+    .then(res => {
+      dispatch({
+        type: actionTypes.SHOW_SUCCESS,
+        msg: res.data.message,
+      });
+      alert(res.data.message);
+      dispatch({
+        type: actionTypes.CLEAR_SUCCESS,
+      });
+    });
 };
 
 // Check token and load sales

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './AddEmployee.css';
 import PageTitle from './PageTitle';
-import { clearErrors, signUpUser } from './redux/actions/lockstoreActions';
+import { signUpUser } from './redux/actions/lockstoreActions';
 import Today from './Today';
 
 const AddEmployee = () => {

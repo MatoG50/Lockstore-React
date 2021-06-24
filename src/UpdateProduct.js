@@ -26,7 +26,7 @@ const UpdateProduct = ({ closeModal }) => {
       category: '',
     });
     dispatch(fetchProduct(productId));
-    closeModal(false);
+    setTimeout(() => closeModal(false), 3000)
   };
 
   return (

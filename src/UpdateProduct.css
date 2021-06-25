@@ -1,17 +1,5 @@
-.back {
-  width: 178px;
-  height: 48px;
-  border-radius: 27px;
-  border: solid 1px #b43b8a;
-  color: #b43b8a;
-  font-size: 24px;
-  font-weight: bold;
-  margin-left: 100px;
-}
-.back:hover {
-  color: #b43b8ab0;
-}
-#add-prod-form {
+#update-prod {
+  margin-top: 8%;
   margin-left: auto;
   margin-right: auto;
   width: 35%;
@@ -19,18 +7,17 @@
   box-shadow: 0 6px 30px 0 rgba(159, 216, 216, 0.24);
   background-color: #ffffff;
   padding: 70px 85px;
-  margin-top: 32px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-#add-prod-form button {
-  margin-bottom: 0;
+
+#update-prod button {
   background-color: #24c6dc;
-  margin: 0 auto 10px auto;
-  width: 90%;
+  margin: 10px auto 10px auto;
+  width: 60%;
   display: block;
   height: 38px;
   border-radius: 23px;
@@ -38,32 +25,31 @@
   border: none;
   font-size: 16px;
 }
-#add-prod-form button:hover {
+#update-prod button:hover {
   background-color: #24c7dca6;
+}
+.modal-background {
+  height: 100vh;
+  width: 80%;
+  background-color: rgba(0,0,0, 0.7);
+  position: fixed;
+  position: absolute;
+  z-index: 1;
 }
 
 /* ---------Media Queries----------------- */
-
-/* ----------------------------------
---------Big Laptop-------------------
--------------------------------------- */
-@media only screen and (max-width: 1440px) {
-  #add-prod-form {
-    padding: 50px 60px;
-  }
-}
 
 /* -----------------------------------------
   ------------Small laptops---------------
   ----------------------------------------- */
 @media only screen and (max-width: 1200px) {
-  #add-prod-form {
+  #update-prod {
     width: 50%;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #add-prod-form {
+  #update-prod {
     width: 60%;
   }
 }
@@ -71,16 +57,22 @@
 /* Mobile phones */
 
 @media only screen and (max-width: 480px) {
-  #add-prod-form {
+  #update-prod {
     width: 95%;
     padding: 5px 5px;
   }
-  .back {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 100px;
-    height: 30px;
-    font-size: 16px;
+  #update-prod button {
+    font-size: 12px;
+  }
+  .modal-background {
+    width: 60%;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 320px) {
+  #update-prod {
+    width: 98%;
   }
 }

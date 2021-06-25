@@ -96,4 +96,28 @@
   #add-product {
     margin: 15px auto 15px auto;
   }
+  #search {
+    width: 40%;
+    font-size: 12px;
+  }
 }
+
+/* Mobile phones */
+
+@media only screen and (max-width: 480px) {
+  .total-prod {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  #search {
+    width: 70%;
+    font-size: 12px;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+/* @media only screen and (max-width: 320px) {
+      
+}
+ */

@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import './Modal.css';
 import { fetchProduct, removeProduct } from './redux/actions/lockstoreActions';
+import UpdateProduct from './UpdateProduct';
 
 const Modal = () => {
+  const [openModal, setOpenModal] = useState(false);
   const history = useHistory();
   const product = useSelector(state => state.showProduct.product?.product);
   const { productId } = useParams();
@@ -15,6 +18,7 @@ const Modal = () => {
   }, []);
   return (
     <div className='main-page'>
+      {openModal && <UpdateProduct closeModal={setOpenModal} />}
       {product && Object.keys(product).length === 0 ? (
         <div className='loading'>...Loading</div>
       ) : (
@@ -37,7 +41,14 @@ const Modal = () => {
               {product && product.minimum_stock}
             </span>
           </p>
-          <button className='update'>Update</button>
+          <button
+            className='update'
+            onClick={() => {
+              setOpenModal(true);
+            }}
+          >
+            Update
+          </button>
           <button
             className='delete'
             onClick={() => {

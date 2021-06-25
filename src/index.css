@@ -36,3 +36,9 @@ input[type='text'] {
   font-family: 'Poppins', sans-serif;
   margin-left: 2%;
 }
+
+@media only screen and (max-width: 480px) {
+  .main-page {
+    width: 60%;
+  }
+}

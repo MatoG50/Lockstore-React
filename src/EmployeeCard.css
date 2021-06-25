@@ -45,3 +45,35 @@
     height: 280px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .employee-card {
+    width: 200px;
+    height: 200px;
+  }
+  .emp-name,
+  .emp-role {
+    font-size: 16px;
+  }
+  #emp-image {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 320px) {
+  .employee-card {
+    height: 170px;
+    width: 170px;
+  }
+  .emp-name,
+  .emp-role {
+    font-size: 12px;
+  }
+  #emp-image {
+    height: 60px;
+    width: 60px;
+  }
+}

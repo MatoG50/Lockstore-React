@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProducts } from './redux/actions/lockstoreActions';
 import Today from './Today';
-// import { useState } from 'react';
+import { useState } from 'react';
 
 const Products = () => {
-  // const [searchProd, setSearchProd] = useState('');
+  const [searchProd, setSearchProd] = useState('');
   const product = useSelector(
     state => state.displayProducts.products?.Products
   );
@@ -38,13 +38,13 @@ const Products = () => {
         type='text'
         id='search'
         placeholder='Search a product'
-        // onChange={e => {
-        //   setSearchProd(e.target.value);
-        // }}
+        onChange={e => {
+          setSearchProd(e.target.value);
+        }}
       />
 
       <div className='products-list'>
-        <ProductCard />
+        <ProductCard prodSearch={searchProd} />
       </div>
     </div>
   );

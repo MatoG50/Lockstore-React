@@ -9,7 +9,6 @@
 }
 .employee-no {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin-top: 20px;
   flex-wrap: wrap;
@@ -141,10 +140,22 @@
 /* -----------------------------------------
 ------------MOBILE DEVICES---------------
 ----------------------------------------- */
-/*   
+
 @media only screen and (max-width: 480px) {
-      
-} */
+  .total-emp {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .employee-no {
+    flex-direction: column;
+    margin: 5px auto;
+    align-items: center;
+  }
+  .attendants,
+  .admin {
+    margin-bottom: 5px;
+  }
+}
 
 /*----SMALL MOBILE DEVICES------*/
 

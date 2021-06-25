@@ -118,3 +118,39 @@
 .back-btn:hover {
   background-color: #24c7dca2;
 }
+
+/* Mobile phones */
+
+@media only screen and (max-width: 480px) {
+  .modal {
+    width: 200px;
+    height: 400px;
+  }
+
+  .prod-inv,
+  .prod-price,
+  .prod-min-stock {
+    font-size: 12px;
+  }
+  .user-det {
+    font-size: 16px;
+  }
+  .update,
+  .delete {
+    width: 70px;
+    font-size: 12px;
+    height: 25px;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 320px) {
+  .modal {
+    width: 180px;
+    height: 400px;
+  }
+  .user-det {
+    font-size: 14px;
+  }
+}

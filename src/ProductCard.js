@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
-const ProductCard = () => {
-  // const [searchProd, setSearchprod] = useState('');
+const ProductCard = ({ prodSearch }) => {
   const product = useSelector(
     state => state.displayProducts.products?.Products
   );
@@ -12,15 +11,17 @@ const ProductCard = () => {
   const productList =
     product &&
     product
-      // .filter(prod => {
-      //   if (searchProd == '') {
-      //     return prod;
-      //   } else if (
-      //     prod.name.toLowerCase().includes(searchProd.toLocaleLowerCase())
-      //   ) {
-      //     return prod;
-      //   }
-      // })
+      // search product
+      .filter(prod => {
+        if (prodSearch === '') {
+          return prod;
+        } else if (
+          prod.name.toLowerCase().includes(prodSearch.toLocaleLowerCase())
+        ) {
+          return prod;
+        }
+      })
+      // show products
       .map(prod => {
         return (
           <div className='product-card' key={prod['product id']}>

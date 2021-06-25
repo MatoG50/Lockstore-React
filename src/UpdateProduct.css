@@ -36,3 +36,43 @@
   position: absolute;
   z-index: 1;
 }
+
+/* ---------Media Queries----------------- */
+
+/* -----------------------------------------
+  ------------Small laptops---------------
+  ----------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  #update-prod {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #update-prod {
+    width: 60%;
+  }
+}
+
+/* Mobile phones */
+
+@media only screen and (max-width: 480px) {
+  #update-prod {
+    width: 95%;
+    padding: 5px 5px;
+  }
+  #update-prod button {
+    font-size: 12px;
+  }
+  .modal-background {
+    width: 60%;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 320px) {
+  #update-prod {
+    width: 98%;
+  }
+}

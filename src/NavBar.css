@@ -101,10 +101,12 @@ li a:hover {
 /* -----------------------------------------
       ------------MOBILE DEVICES---------------
       ----------------------------------------- */
-/*   
-  @media only screen and (max-width: 480px) {
 
-  } */
+@media only screen and (max-width: 480px) {
+  .navbar {
+    width: 40%;
+  }
+}
 
 /*----SMALL MOBILE DEVICES------*/
 
